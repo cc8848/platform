@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<entry key="app_preset_prof_preset_name">readxml Launch Configuration</entry>
+<entry key="app_preset_prof_preset_filter_s"/>
+<entry key="app_preset_prof_preset_filter_p">com.xmbl.ops.constant.*,
+com.xmbl.ops.controller.data.*,
+com.xmbl.ops.controller.organization.*,
+com.xmbl.ops.controller.tool.*,
+com.xmbl.ops.dao.base.*,
+com.xmbl.ops.dao.data.*,
+com.xmbl.ops.dao.game.*,
+com.xmbl.ops.dao.mongo.*,
+com.xmbl.ops.dao.organization.*,
+com.xmbl.ops.dto.*,
+com.xmbl.ops.enumeration.*,
+com.xmbl.ops.interceptor.*,
+com.xmbl.ops.itstack.*,
+com.xmbl.ops.model.mongo.*,
+com.xmbl.ops.model.organization.*,
+com.xmbl.ops.service.data.*,
+com.xmbl.ops.service.game.*,
+com.xmbl.ops.service.organization.*,
+com.xmbl.ops.service.tool.*,
+com.xmbl.ops.shiro.*,
+com.xmbl.ops.task.*,
+com.xmbl.ops.test.*,
+com.xmbl.ops.util.*</entry>
+<entry key="app_preset_prof_preset_alloc_p">10</entry>
+<entry key="app_preset_"/>
+<entry key="app_preset_prof_preset_samplingRefreshRate_s">1000</entry>
+<entry key="app_preset_prof_preset_stacks_p">false</entry>
+<entry key="app_preset_prof_preset_roots_p">com.xmbl.ops.constant.**
+com.xmbl.ops.controller.data.**
+com.xmbl.ops.controller.organization.**
+com.xmbl.ops.controller.tool.**
+com.xmbl.ops.dao.base.**
+com.xmbl.ops.dao.data.**
+com.xmbl.ops.dao.game.**
+com.xmbl.ops.dao.mongo.**
+com.xmbl.ops.dao.organization.**
+com.xmbl.ops.dto.**
+com.xmbl.ops.enumeration.**
+com.xmbl.ops.interceptor.**
+com.xmbl.ops.itstack.**
+com.xmbl.ops.model.mongo.**
+com.xmbl.ops.model.organization.**
+com.xmbl.ops.service.data.**
+com.xmbl.ops.service.game.**
+com.xmbl.ops.service.organization.**
+com.xmbl.ops.service.tool.**
+com.xmbl.ops.shiro.**
+com.xmbl.ops.task.**
+com.xmbl.ops.test.**
+com.xmbl.ops.util.**
+</entry>
+<entry key="profiler.settings.instrument.empty.methods">false</entry>
+<entry key="myeclipse.profiling.mode">0</entry>
+<entry key="profiler.settings.istrument.getter.setter.methods">false</entry>
+<entry key="app_preset_prof_preset_samplingRate_s">100</entry>
+<entry key="app_preset_prof_preset_filterMode_s">true</entry>
+<entry key="app_preset_prof_preset_selector"/>
+<entry key="app_preset_prof_preset_refreshRate_s">1000</entry>
+<entry key="app_preset_prof_preset_runnables_p">true</entry>
+<entry key="app_preset_prof_preset_filterMode_p">false</entry>
+<entry key="app_preset_prof_preset_memoryMode_p">true</entry>
+</properties>

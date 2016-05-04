@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<classPathEntry
+		location="E:\maven\Repositories\mysql\mysql-connector-java\5.1.34\mysql-connector-java-5.1.34.jar" />
+	<context id="context_content" targetRuntime="MyBatis3">
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://127.0.0.1:3306/pm_db" userId="pm_db"
+			password="123456" />
+	<!-- 	<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://192.168.1.246:4051/education_biz" userId="liveaa_education"
+			password="auiDuU#H4ff" />-->
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<!-- <javaModelGenerator targetPackage="com.xmbl.ops.sqlmap"
+			targetProject="xmbl" />
+		<sqlMapGenerator targetPackage="com.xmbl.ops.sqlmap" targetProject="xmbl" /> -->
+        <javaModelGenerator targetPackage="com.xmbl.ops.model.organization" targetProject="xmbl" />
+		<sqlMapGenerator targetPackage="sqlmap" targetProject="xmbl" />
+		
+		<!--  <table tableName="user_log" domainObjectName="UserLog"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		<table tableName="game_server" domainObjectName="GameServer"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>-->
+		<table tableName="data_analysis" domainObjectName="DataAnalysis"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>	
+		<table tableName="active_retention" domainObjectName="ActiveRetention"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>	
+		<table tableName="pay_retention" domainObjectName="PayRetention"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>	
+	</context>
+</generatorConfiguration>

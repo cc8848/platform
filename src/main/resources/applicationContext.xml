@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+				http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+				http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+	<!-- <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"> <property name="locations" value="classpath:conf.properties" 
+		/> </bean> -->
+	<!-- 读取配置文件位置 -->
+	<import resource="classpath:datasources/applicationContext-mysql.xml" />
+	<import resource="classpath:security/applicationContext-shiro.xml" />
+	<import resource="classpath:datasources/applicationContext-redis.xml" />
+	<import resource="classpath:datasources/applicationContext-mongodb.xml" />
+    <!--  <import resource="classpath:spring-consumer.xml" />
+	<import resource="classpath:spring-dubbo-provider.xml" />-->
+
+	<context:component-scan base-package="com">
+		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+	</context:component-scan>
+	<!--  <bean id="CommonConstant" class="com.xmbl.ops.constant.CommonConstant">
+		<property name="teacher_api_url" value="${teacher_api_url}" />
+		<property name="question_id_url" value="${question_id_url}" />
+	</bean>-->
+	<context:property-placeholder location="classpath:datasource.properties"/>
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">  
+        <property name="defaultEncoding" value="UTF-8"></property>  
+         <property name="maxUploadSize" value="268435456"/>
+    </bean>  
+    
+
+</beans>

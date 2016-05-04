@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true">
+	<statusListener class="ch.qos.logback.core.status.OnConsoleStatusListener" />
+	<property resource="datasource.properties" />
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+    <!-- 数据库sql_log -->
+	<appender name="mybatis_sql_log"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder>
+			<charset>UTF-8</charset>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
+		</encoder>
+		<File>${log.base}mybatis_sql/mybatis_sql.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${log.base}mybatis_sql/%d{yyyy-MM-dd}.mybatis_sql.log.zip
+			</FileNamePattern>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%thread${log.separator}%date${log.separator}%-5level${log.separator}%logger${log.separator}%M${log.separator}%msg%n
+			</pattern>
+		</layout>
+	</appender>
+	<logger name="mybatis_sql_log" level="INFO">
+		<appender-ref ref="mybatis_sql_log" />
+	</logger>
+	
+	<!--项目 xmbl_log -->
+	<appender name="xmbl_log"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder>
+			<charset>UTF-8</charset>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
+		</encoder>
+		<File>${log.base}xmbl/xmbl.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${log.base}xmbl/%d{yyyy-MM-dd}.xmbl.log.zip
+			</FileNamePattern>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%thread${log.separator}%date${log.separator}%-5level${log.separator}%logger${log.separator}%M${log.separator}%msg%n
+			</pattern>
+		</layout>
+	</appender>
+	<logger name="xmbl_log" level="INFO">
+		<appender-ref ref="xmbl_log" />
+	</logger>
+
+	<!--项目慢查询performance_slow_xmbl_log -->
+	<appender name="performance_slow_xmbl_log"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder>
+			<charset>UTF-8</charset>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
+		</encoder>
+		<File>${log.base}performance_slow_xmbl/performance_slow_xmbl.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${log.base}performance_slow_xmbl/%d{yyyy-MM-dd}.performance_slow_xmbl.log.zip
+			</FileNamePattern>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%thread${log.separator}%date${log.separator}%-5level${log.separator}%logger${log.separator}%M${log.separator}%msg%n
+			</pattern>
+		</layout>
+	</appender>
+	<logger name="performance_slow_xmbl_log" level="INFO">
+		<appender-ref ref="performance_slow_xmbl_log" />
+	</logger>
+
+	<!--项目performance_xmbl_log -->
+	<appender name="performance_xmbl_log"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder>
+			<charset>UTF-8</charset>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n
+			</pattern>
+		</encoder>
+		<File>${log.base}performance_xmbl/performance_xmbl.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${log.base}performance_xmbl/%d{yyyy-MM-dd}.performance_xmbl.log.zip
+			</FileNamePattern>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%thread${log.separator}%date${log.separator}%-5level${log.separator}%logger${log.separator}%M${log.separator}%msg%n
+			</pattern>
+		</layout>
+	</appender>
+	<logger name="performance_xmbl_log" level="INFO">
+		<appender-ref ref="performance_xmbl_log" />
+	</logger>
+	
+
+	<!--项目任务日志 -->
+	<appender name="xmbl_task_log"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder>
+			<charset>UTF-8</charset>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n
+			</pattern>
+		</encoder>
+		<File>${log.base}performance_xmbl/performance_xmbl.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${log.base}performance_xmbl/%d{yyyy-MM-dd}.performance_xmbl.log.zip
+			</FileNamePattern>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%thread${log.separator}%date${log.separator}%-5level${log.separator}%logger${log.separator}%M${log.separator}%msg%n
+			</pattern>
+		</layout>
+	</appender>
+	<logger name="performance_xmbl_log" level="INFO">
+		<appender-ref ref="performance_xmbl_log" />
+	</logger>
+	
+	
+	 <logger name="com.xmbl.ops.model" level="DEBUG" />
+	<root level="INFO">
+		<appender-ref ref="STDOUT" />
+	</root>
+</configuration>  
